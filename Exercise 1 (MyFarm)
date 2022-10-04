@@ -1,0 +1,27 @@
+
+package Farm;
+
+public class MyFarm{
+    public static void main (String[] args) {
+        Duck d1 = new Duck("Donald", "male", 3.2, 5,"Quack Quack");
+        Duck d2 = new Duck("Cheese", "female", 3.2, 5, "Quack Quack");
+        Cow cw = new Cow("Molly", "female", 1600.0, 5, "Moo Moo");
+        Chicken ck1 = new Chicken("Albert", "male", 1.6, 2, "Cock-a-Doodle-doo");
+        Chicken ck2 = new Chicken("Amelia", "female", 1.8, 4, "Cluck Cluck");
+        Chicken ck3 = new Chicken("Dixie", "female", 1.7, 4, "Cluck Cluck");
+        System.out.println(d1);
+        System.out.println(d2);
+        System.out.println(cw);
+        System.out.println(ck1);
+        System.out.println(ck2);
+        System.out.println(ck3);
+        System.out.println("Donald: " + d1.feedLoadingSchedule());
+        System.out.println("Cheese: " + d2.feedLoadingSchedule());
+        System.out.println("Molly: " + cw.feedLoadingSchedule());
+        System.out.println("Albert: " + ck1.feedLoadingSchedule());
+        System.out.println("Amelia: " + ck2.feedLoadingSchedule());
+        System.out.println("Dixie: " + ck3.feedLoadingSchedule());
+    }
+
+
+}
