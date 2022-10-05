@@ -1,0 +1,80 @@
+package Flying;
+
+public interface Flight {
+    void fly();
+}
+
+package Flying;
+
+public class Airplane implements Flight{
+    private String model;
+    private int year;
+
+    public Airplane(String model, int year) {
+        this.model = model;
+        this.year = year;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void fly() {
+        System.out.println("I’m an airplane that relies on an engine to fly.");
+    }
+    public String toString() {
+        return "Airplane [model=" + model + ", year=" + year + "]: ";
+    }
+}
+
+package Flying;
+
+public class Bird implements Flight{
+    private String type;
+
+    public Bird(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void fly() {
+        System.out.println("I’m a bird who flaps wings to fly.");
+    }
+    public String toString() {
+        return "Bird [type=" + type + "]: ";
+    }
+}
+
+package Flying;
+
+public class ThingsThatFly {
+    public static void main(String[] args) {
+        Flight[] f = new Flight[3];
+        f[0] = new Airplane("Boeing 747", 2016);
+        f[1] = new Bird("Eagle");
+        f[2] = new Bird("Hummingbird");
+        for (int i = 0; i < 3; i++) {
+            System.out.print(f[i]);
+            f[i].fly();
+        }
+    }
+}
