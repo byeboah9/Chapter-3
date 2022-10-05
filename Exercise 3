@@ -1,0 +1,23 @@
+package Flying;
+
+public interface Movement extends Flight{
+    void walk();
+    void jump();
+}
+
+package Flying;
+
+public class ThingsThatMove {
+    public static void main(String[] args) {
+        Movement[] m = new Movement[3];
+        m[0] = new Airplane("Boeing 747", 2016);
+        m[1] = new Bird("Eagle");
+        m[2] = new Bird("Hummingbird");
+        for (int i = 0; i < 3; i++) {
+            System.out.println(m[i]);
+            m[i].fly();
+            m[i].walk();
+            m[i].jump();
+        }
+    }
+}
